@@ -1,0 +1,161 @@
+<!doctype html>
+<html lang="id">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>HUBUNGAN TINGKAT KEPUASAN TERHADAP SISTEM TRANSAKSI YANG DIGUNAKAN OLEH APLIKASI ONLINE INDODAX</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
+  <style>
+    :root{--bg:#f7f8fa;--card:#ffffff;--muted:#6b7280;--accent:#0f766e}
+    body{font-family:Inter,system-ui,-apple-system,Segoe UI,Roboto,"Helvetica Neue",Arial;margin:0;background:var(--bg);color:#0f172a}
+    .container{max-width:1100px;margin:36px auto;padding:24px}
+    header{display:flex;align-items:center;gap:16px}
+    header h1{margin:0;font-size:1.6rem}
+    .meta{color:var(--muted);font-size:0.95rem}
+    .card{background:var(--card);border-radius:12px;padding:18px;box-shadow:0 6px 18px rgba(12,14,20,.06);margin-top:18px}
+    .grid{display:grid;grid-template-columns:1fr 380px;gap:18px}
+    .full{grid-column:1/-1}
+    table{width:100%;border-collapse:collapse;margin-top:8px}
+    th,td{padding:8px 10px;text-align:left;border-bottom:1px solid #eef2f6}
+    .small{font-size:0.9rem;color:var(--muted)}
+    footer{margin-top:26px;color:var(--muted);font-size:0.9rem;text-align:center}
+    .next-btn {
+      display: inline-block;
+      margin-top: 16px;
+      padding: 12px 24px;
+      background: linear-gradient(135deg, #0f766e, #06b6d4);
+      color: white;
+      text-decoration: none;
+      font-weight: 600;
+      border-radius: 30px;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+      transition: all 0.3s ease;
+    }
+    .next-btn:hover {
+      background: linear-gradient(135deg, #0d5f59, #0f766e);
+      transform: translateY(-2px);
+    }
+    .next-btn:active {
+      transform: translateY(1px);
+    }
+    @media (max-width:900px){.grid{grid-template-columns:1fr} .card{padding:14px}}
+  </style>
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+<body>
+  <div class="container">
+    <header>
+      <svg width="48" height="48" viewBox="0 0 24 24" fill="none" aria-hidden>
+        <rect width="24" height="24" rx="6" fill="#06b6d4"></rect>
+        <path d="M6 15h12M6 9h6" stroke="#fff" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+      </svg>
+      <div>
+        <h1>HUBUNGAN TINGKAT KEPUASAN TERHADAP SISTEM TRANSAKSI YANG DIGUNAKAN OLEH APLIKASI ONLINE INDODAX</h1>
+        <div class="meta">Ringkasan visual dan artikel yang dibuat dari dokumen penelitian Anda.</div>
+      </div>
+    </header>
+
+    <div class="grid">
+      <article class="card">
+        <h2>Ringkasan Temuan</h2>
+        <p class="small">Berdasarkan data survei terhadap <strong>62 responden</strong>, mayoritas berusia 20–30 tahun dan 72,6% menyatakan puas terhadap kecepatan transaksi. Uji Chi-square menunjukkan hubungan signifikan (p = 0,032 &lt; 0,05) antara kecepatan transaksi dan tingkat kepuasan.</p>
+
+        <h3>Rincian</h3>
+        <p class="small">Nilai-nilai utama yang dijadikan sumber grafik:</p>
+        <ul class="small">
+          <li>Usia 20–30: 41, Usia 31–40: 21</li>
+          <li>Jenis kelamin — Laki-laki: 34, Perempuan: 28</li>
+          <li>Puas: 45, Tidak puas: 17</li>
+          <li>Kecepatan transaksi — Cepat: 49, Lambat: 13</li>
+        </ul>
+
+        <h3>Interpretasi singkat</h3>
+        <p class="small">Hasil menunjukkan bahwa kecepatan transaksi merupakan penentu penting kepuasan pengguna. Platform sebaiknya fokus meningkatkan performa saat lonjakan trafik dan menambah transparansi (mis. transaction tracker).</p>
+
+        <h3>Rekomendasi untuk Indodax</h3>
+        <ol class="small">
+          <li>Perkuat infrastruktur server dan optimalkan kode saat load tinggi.</li>
+          <li>Sediakan fitur monitoring transaksi untuk meningkatkan transparansi.</li>
+          <li>Komunikasi proaktif jika terjadi gangguan layanan.</li>
+        </ol>
+
+        <div style="margin-top:12px;">
+          <h3>Data Tabel Singkat</h3>
+          <table>
+            <thead><tr><th>Variabel</th><th>Jumlah (n)</th><th>Persentase</th></tr></thead>
+            <tbody>
+              <tr><td>Total responden</td><td>62</td><td>100%</td></tr>
+              <tr><td>Puas</td><td>45</td><td>72,6%</td></tr>
+              <tr><td>Tidak puas</td><td>17</td><td>27,4%</td></tr>
+              <tr><td>Kecepatan cepat</td><td>49</td><td>79,0%</td></tr>
+              <tr><td>Kecepatan lambat</td><td>13</td><td>21,0%</td></tr>
+            </tbody>
+          </table>
+        </div>
+      </article>
+
+      <aside class="card">
+        <h3>Diagram & Grafik</h3>
+        <canvas id="ageChart" width="350" height="220"></canvas>
+        <canvas id="satisfactionChart" width="350" height="220" style="margin-top:14px"></canvas>
+        <canvas id="relationChart" width="350" height="220" style="margin-top:14px"></canvas>
+      </aside>
+
+      <section class="card full">
+        <h3>Kesimpulan</h3>
+        <p class="small">a. Mayoritas responden berusia 20–30 tahun (66,1%), berjenis kelamin laki-laki (54,8%), serta memiliki pendidikan terakhir SMA/MA (48,4%). Lama penggunaan aplikasi sebagian besar adalah 1–2 tahun (40,3%) dengan frekuensi transaksi 2–3 kali dalam sebulan terakhir (45,2%).</p>
+        <p class="small">b. Sebanyak 45 responden (72,6%) menyatakan puas terhadap kecepatan sistem transaksi pada aplikasi Indodax, sementara 17 responden (27,4%) menyatakan tidak puas. Hal ini menunjukkan bahwa mayoritas pengguna menilai sistem transaksi Indodax cukup cepat dan memuaskan.</p>
+        <p class="small">c. Hasil uji Chi-Square menunjukkan nilai p-value = 0,032 &lt; 0,05, yang berarti terdapat hubungan yang signifikan antara kecepatan sistem transaksi dengan tingkat kepuasan pengguna. Semakin cepat sistem memproses transaksi, semakin tinggi pula tingkat kepuasan pengguna.</p>
+      </section>
+    </div>
+
+    <footer class="card">
+      <div class="small">Sumber dokumen asli berasal dari BAB 4-5 skripsi Arira Satra Yoga</div>
+      <!-- Tombol Halaman Selanjutnya -->
+      <a href="halaman2.html" class="next-btn">Halaman Selanjutnya ➝</a>
+    </footer>
+  </div>
+
+  <script>
+    // Chart.js
+    const ageCtx = document.getElementById('ageChart').getContext('2d');
+    new Chart(ageCtx, {
+      type: 'bar',
+      data: {
+        labels: ['20-30', '31-40'],
+        datasets: [{
+          label: 'Jumlah Responden',
+          data: [41, 21],
+          backgroundColor: ['rgba(15,118,110,0.85)','rgba(6,182,212,0.85)'],
+          borderRadius: 6
+        }]
+      },
+      options: {plugins:{legend:{display:false}},scales:{y:{beginAtZero:true,ticks:{precision:0}}}}
+    });
+
+    const satCtx = document.getElementById('satisfactionChart').getContext('2d');
+    new Chart(satCtx, {
+      type: 'pie',
+      data: {
+        labels: ['Puas','Tidak Puas'],
+        datasets: [{data:[45,17], backgroundColor:['rgba(15,118,110,0.9)','rgba(120,124,140,0.9)']}]
+      },
+      options:{plugins:{legend:{position:'bottom'}}}
+    });
+
+    const relationCtx = document.getElementById('relationChart').getContext('2d');
+    new Chart(relationCtx, {
+      type: 'bar',
+      data: {
+        labels: ['Cepat','Lambat'],
+        datasets: [
+          {label: 'Puas', data: [40, 5], backgroundColor: 'rgba(15,118,110,0.85)', borderRadius: 5},
+          {label: 'Tidak Puas', data: [9, 8], backgroundColor: 'rgba(120,124,140,0.85)', borderRadius: 5}
+        ]
+      },
+      options:{responsive:true,plugins:{legend:{position:'bottom'}},scales:{y:{beginAtZero:true,ticks:{precision:0}}}}
+    });
+  </script>
+</body>
+</html>
